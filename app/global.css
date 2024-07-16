@@ -1,14 +1,15 @@
 /* styles/globals.css 또는 임의의 CSS 파일에 추가 */
 .aspect-ratio {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 비율을 위한 패딩 */
-  }
-  
-  .aspect-ratio > * {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-  }
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 비율을 위한 패딩 */
+}
+
+.aspect-ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
