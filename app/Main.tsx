@@ -3,8 +3,6 @@
 import Link from '@/components/Link'
 import MainCharacter from '@/components/MainCharacter'
 import headerNavLinks from '@/data/headerNavLinks'
-import siteMetadata from '@/data/siteMetadata'
-import { formatDate } from 'pliny/utils/formatDate'
 
 export default function Home({ posts }) {
   return (

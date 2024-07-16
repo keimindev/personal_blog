@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Ming 🐰',
+  title: 'Ming Dev',
   author: 'MinGyeong',
   headerTitle: 'Ming',
   description: 'A blog created with Next.js and Tailwind.css',
@@ -9,7 +9,6 @@ const siteMetadata = {
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   // siteLogo: '/static/images/logo.png',
-  siteLogo: '/static/jains_avatar.riv',
   socialBanner: '/static/images/twitter-card.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'keimindev@gmail.com',
