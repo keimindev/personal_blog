@@ -7,11 +7,11 @@ import headerNavLinks from '@/data/headerNavLinks'
 export default function Home({ posts }) {
   return (
     <>
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full flex-col items-center justify-between md:flex-row">
         <section className="aspect-ratio">
           <MainCharacter />
         </section>
-        <section className="w-full">
+        <section className="mt-20 w-full text-center md:mt-0 md:text-start">
           <div className="text-4xl">
             <p>Hello,</p>
             <p>

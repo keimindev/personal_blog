@@ -1,9 +1,9 @@
 {
-  "react": 1,
-  "redux": 1,
-  "project": 1,
   "leetcode": 2,
   "javascript": 2,
   "hash": 1,
-  "bitmanipulation": 1
+  "bitmanipulation": 1,
+  "react": 1,
+  "redux": 1,
+  "project": 1
 }
