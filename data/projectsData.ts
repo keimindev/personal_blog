@@ -9,8 +9,8 @@ const projectsData: Project[] = [
   {
     title: 'SafeMoney',
     description: `1:1 Transaction platform`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/projects/netflix-ox-quiz',
+    imgSrc: '/static/images/project/safemoney-1.png',
+    href: '/blog/projects/safemoney',
   },
   {
     title: 'Netflix OX Quiz',
