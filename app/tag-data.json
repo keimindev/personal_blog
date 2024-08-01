@@ -1,13 +1,13 @@
 {
+  "nextjs": 3,
+  "tailwindcss": 1,
+  "project": 4,
+  "recoil": 2,
+  "shadcnui": 1,
+  "react": 1,
+  "redux": 1,
   "leetcode": 2,
   "javascript": 2,
   "hash": 1,
-  "bitmanipulation": 1,
-  "react": 1,
-  "redux": 1,
-  "project": 4,
-  "nextjs": 3,
-  "tailwindcss": 1,
-  "recoil": 2,
-  "shadcnui": 1
+  "bitmanipulation": 1
 }
