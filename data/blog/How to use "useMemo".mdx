@@ -1,0 +1,61 @@
+---
+title: How to use "useMemo"
+date: '2024-08-13'
+tags: ['javascript', 'react']
+draft: false
+summary: useMemo is a React Hook that lets you cache the result of a calculation between re-renders.
+---
+
+## useMemo
+
+`useMemo` is a React Hook that lets you cache the result of a calculation between re-renders.
+
+```javascript
+const cachedValue = useMemo(calculateValue, dependencies)
+```
+
+`useMemo` cached only vaule, not function.
+cachedValue is function that you want to cache. It shoud be pure, should take no arguments, and should return a value of any type.
+React will call your function during the initial render. On next renders, React will return the same value again if the dependencies have not changed since the last render. Otherwise, it will call calculateValue, return its result, and store it so it can be reused later.
+
+<br></br>
+
+## useMemoe usage
+
+```javascript
+// defined datepicker date
+const endDate = new Date(dateRange?.to || new Date());
+endDate.setUTCHours(0, 0, 0, 0);
+
+---- adjust useMemo
+
+// using useMemo
+const endDate = useMemo(() => {
+    const date = new Date(dateRange?.to || new Date());
+    date.setUTCHours(0, 0, 0, 0);
+    return date;
+  }, [dateRange?.to]);
+```
+
+Don't forget to return value.
+If none of the dependencies have changed, useMemo will return the value you already calculated before. Otherwise, React will re-run your calculation and return the new value.
+
+<br></br>
+
+## when it is useful
+
+By default, React will re-run the entire body of your component every time that it re-renders.
+For example, if this daterange updates its state or receives new props from its parent, date will re-update.
+Usually, this isn’t a problem because most calculations or function are very fast.
+However, if you’re filtering or transforming a large array, or doing some expensive computation, you might want to skip doing it again if data hasn’t changed.
+lets you reuse daterange you’ve already saved before.
+This type of caching is called `memoization`.
+
+**You should only rely on `useMemo` as a performance optimization.**
+If your code doesn’t work without it, find the underlying problem and fix it first. Then you may add `useMemo` to improve performance.
+
+<br></br>
+
+<br></br>
+
+- [React - useMemo](https://react.dev/reference/react/useMemo)
