@@ -24,17 +24,15 @@ React will call your function during the initial render. On next renders, React 
 
 ```javascript
 // defined datepicker date
-const endDate = new Date(dateRange?.to || new Date());
-endDate.setUTCHours(0, 0, 0, 0);
-
----- adjust useMemo
+const endDate = new Date(dateRange?.to || new Date())
+endDate.setUTCHours(0, 0, 0, 0)
 
 // using useMemo
 const endDate = useMemo(() => {
-    const date = new Date(dateRange?.to || new Date());
-    date.setUTCHours(0, 0, 0, 0);
-    return date;
-  }, [dateRange?.to]);
+  const date = new Date(dateRange?.to || new Date())
+  date.setUTCHours(0, 0, 0, 0)
+  return date
+}, [dateRange?.to])
 ```
 
 Don't forget to return value.
