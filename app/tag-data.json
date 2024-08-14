@@ -3,12 +3,12 @@
   "react": 2,
   "leetcode": 4,
   "bitmanipulation": 2,
+  "hash": 1,
   "stack": 1,
+  "redux": 1,
+  "project": 4,
   "nextjs": 3,
   "tailwindcss": 1,
-  "project": 4,
   "recoil": 2,
-  "shadcnui": 1,
-  "redux": 1,
-  "hash": 1
+  "shadcnui": 1
 }
