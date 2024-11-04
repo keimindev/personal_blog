@@ -16,7 +16,7 @@ const projectsData: Project[] = [
     title: 'T.O.T App ver',
     description: `A time tracking platform`,
     imgSrc: '/static/images/project/tot-app.png',
-    href: '/blog/projects/tot',
+    href: '/blog/projects/tot-app',
   },
   {
     title: 'SafeMoney',
