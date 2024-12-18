@@ -1,0 +1,77 @@
+---
+title: Released iOS Application on the App Store
+date: '2024-12-18'
+tags: ['ios', 'react-native', 'expo', 'TIL']
+draft: false
+summary: I’ve done build and released an Application called ’T.o.T’ finally.
+---
+
+**I’ve done build and released an Application called ’T.o.T’ finally.**
+I had built an App with Expo and React-native. I’d like to write document in detail the process of releasing an app to the Store.
+However, with each step forward, i faced to conflicts and frustrations that overwhelmed me and blank-minded that i couldn't keep any records. First of all, I try to write about what I felt and learned while building and releasing an Application.
+
+<br></br>
+
+<div className="m-0 flex flex-wrap p-0">
+  <img
+    className="w-[300px]"
+    src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F0pQkN%2FbtsLnF29bCh%2F4NnDJXMutrdYlejKyMV9M0%2Fimg.jpg"
+  />
+    <img
+    className="w-[300px]"
+    src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbeaFtI%2FbtsLnSaaG3i%2FpTHBvfDk7kTTsYTdZljU1k%2Fimg.jpg"
+  />
+
+</div>
+
+## What is the motivation for release App?
+
+The beginning of T.o.T was simply a resolution : “I should dedicate 30 minutes a day to focused reading.”
+The idea was to use a stopwatch to track the time spent on various activities throughout the day.
+The first step was a web platform built with Next.js
+I build a web application with MVP quickly and continuously add more ideas for improvement quality of product.
+I had created a result with most of the features I wanted, and at first, I didn’t feel any inconvenience using it on a PC.
+However, as I tried to log time while on the move, I started noticing several inconveniences when using it on a mobile device.
+This led me to think about building it as a mobile application. I considered using a web-view with the current code, but
+I saw the opportunity to gain experience in releasing an application on the App Store.
+
+<br></br>
+
+## The Challenges of App deployment
+
+I build a React-Native Application using Expo. I’d never had experience building a mobile application before, I should learned it from official documents and several video contents from Youtube.
+Wanting to quickly build and use it, I focused solely on targeting the iOS App Store. The actual coding part didn’t pose much of a challenge.
+
+The main challenges the database and deployment.
+I used a backend solution called “Appwrite” , which is an open-source service to providing functional APIs for building web and mobile applications. It makes it easy to manage various features, including storage, authentication, database etc.
+However, despite the presence of detailed official documentation, building a user account deletion feature proved to be quite challenging. Since account deletion couldn't be handled on the client side due to security concerns, I debated whether I needed to develop the server-side myself. In the end, I resolved the issue by utilizing the API functionality provided by Appwrite.
+
+I had always focused solely on the front-end side when building products, which revealed my lack of awareness regarding data management. When a user deletes their account, all of their associated resources need to be removed as well.
+Initially, I thought it was as simple as just deleting the account, but it took me some time to realize that it wasn’t the case.
+
+To distribute the app on the App Store, I had to register for Apple Developer, but this process consumed so much time that it felt like a series of endless frustrations. First, I faced the inconvenience of not being able to register my Apple account. After finally managing to make the payment, another issue arose where Apple didn't send a subscription confirmation. I ended up spending over a week just getting the account registered, even reaching out to Apple for support.
+
+When I submitted the app for review for the first time, it was rejected due to the lack of a user deletion feature related to private data. After adding the necessary functionality and resubmitting, the app was finally approved and launched.
+
+<br></br>
+
+## Lessons learned while building an App
+
+Actually deploying an app made me wonder, "How do mobile developers work?" I also realized how much attention is required for even the smallest details when creating a product. Although I launched the app, I couldn't help but feel that it was quite basic and modest. Even while it was functioning, I kept thinking, "Ah, this is a bug, I need to fix this," and the list of things I wanted to improve kept growing.
+From a design perspective, I also wanted to make some improvements, but I wasn’t sure where or how to start. Thoughts like, "Wouldn't it be more convenient if it had this feature?" kept popping up, and all I could see were areas that felt lacking or needed enhancement.
+
+To launch an app on the App Store, you need to pay attention to both the product and the marketing side. An icon is necessary, you need a detailed page for the app’s description, and a product introduction page for marketing purposes. While it's easy to think that these things can be made simply, they kept bothering me, and I couldn't shake the feeling that I needed to pay more attention to these aspects.
+
+<br></br>
+
+## Goals
+
+I thought the goal was to launch the app. I thought it would be over once the app was launched, but in reality, it’s not the end.
+Now, I have ideas for features that would be nice to add, and I keep thinking about how some parts are still lacking.
+I will set the next goal and continue improving the app.
+Currently, there’s just the stopwatch, but I’d like to add a timer function, and also allow users to set their own routine activities instead of just the pre-set ones.
+There are many things I want to develop further. The details that need improvement also stand out, so I’ll continue to fix and enhance them.
+
+<br></br>
+<br></br>
+<br></br>
