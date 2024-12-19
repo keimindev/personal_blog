@@ -1,0 +1,74 @@
+---
+title: leetCode 22.Generate Parentheses
+date: '2024-12-19'
+tags: ['leetcode', 'javascript', 'medium', 'backtracking']
+draft: false
+summary: leetcode 22
+---
+
+leetCode [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/).
+
+## Problem
+
+Given `n` pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+Example 1:
+
+```javascript
+Input: n = 3
+Output: ['((()))', '(()())', '(())()', '()(())', '()()()']
+```
+
+Example 2:
+
+```javascript
+Input: n = 1
+Output: ['()']
+```
+
+Constraints:
+
+- 1 <= n <= 8
+
+<br></br>
+
+## Approach
+
+<div className="m-0 flex flex-wrap justify-center p-0">
+  <img
+    src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvA6xZ%2FbtsLnjOafWj%2FtHCCOogcrkoSqFHYKkU0p0%2Fimg.jpg"
+    alt="example1"
+    width="500"
+  />
+</div>
+
+"(" , ")" called "open" and "close" each other.
+I need 3 open, 3close.
+open must be first. close can not be first. always behind open.
+so that means 1 open , 0 close, or 1 open, 1close -> `open > close`
+
+<br></br>
+
+## Solution
+
+```javascript
+var generateParenthesis = function (n) {
+  const res = []
+  backtracking(0, 0, '')
+  return res
+
+  function backtracking(open, close, cur) {
+    if (close > open || open > n) return
+
+    if (open == n && close == n) {
+      res.push(cur)
+      return
+    }
+    backtracking(open + 1, close, cur + '(')
+    backtracking(open, close + 1, cur + ')')
+  }
+}
+```
+
+<br></br>
+<br></br>
