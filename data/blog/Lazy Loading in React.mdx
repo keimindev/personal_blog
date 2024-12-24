@@ -1,0 +1,81 @@
+---
+title: Lazy Loading in React
+date: '2024-12-24'
+tags: ['javascript', 'react']
+draft: false
+summary: Lazy Loading is a performance optimization technique used to improve the efficiency and speed of web application.
+---
+
+## Lazy Loading
+
+Lazy Loading is a performance optimization technique used to improve the efficiency and speed of web application.
+In React, lazy loading allows developers to delay the loading of components or assets until they are actually needed, rather than loading everything upfront. This approach helps reduce the initial load time of an application, enhancing the user experience and ensuring that the app remains responsive and fast, even as it scales.
+
+<br></br>
+
+## How to use Lazy loading in React
+
+```javascript
+import React, { Suspense } from 'react';
+
+
+// dynamically imports the LazyComponent only when it’s needed
+const LazyComponent = React.lazy(() => import('./LazyComponent'));
+
+function App() {
+  return (
+    <br>
+    // Suspense component  provides a fallback component (in this case, a simple “Loading…” message) to be rendered while the lazy-loaded component is loading.
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+      </Suspense>
+    </>
+  );
+}
+
+export default App;
+
+```
+
+**Code-Splitting**: You split your code into smaller chunks, typically by creating separate bundles for different parts of your application.
+
+<br></br>
+
+**Dynamic Import**: Instead of importing components directly at the top of your file, you use dynamic import() to import them only when they are needed.
+
+<br></br>
+
+**React.lazy()**: You wrap the dynamic import() call with React.lazy(), which allows React to render a fallback component while the requested component is being loaded.
+
+<br></br>
+<br></br>
+
+## Lazy loading in React Advantages
+
+Lazy loading offers several benefits.
+Lazy loading is a valuable optimization technique in React that offers numerous benefits for improving performance, enhancing user experience, and optimizing resource usage in web applications
+
+<br></br>
+
+**Faster Initial Load Time**: By only loading the necessary components when they are needed, lazy loading reduces the initial bundle size of your application. This results in faster load times, especially for large applications with many components or heavy assets.
+
+**Improved Performance**: Smaller initial bundle sizes lead to quicker parsing and execution by the browser, resulting in improved overall performance. Users experience faster page load times and smoother interactions, particularly on slower networks or devices.
+
+**Reduced Network Usage**: Lazy loading decreases the amount of data transferred over the network during the initial page load. This can be beneficial for users on limited data plans or slower connections, as it reduces the time required to download and render the initial content.
+
+**Optimized Resource Usage**: Components or resources that are not immediately needed are deferred until they are required, optimizing resource usage and minimizing memory consumption. This can help improve the efficiency of your application, especially on devices with limited resources.
+
+**Enhanced User Experience**: By prioritizing the loading of critical content and deferring non-essential components, lazy loading can enhance the user experience. Users can interact with the core functionality of the application more quickly, leading to higher user satisfaction and engagement.
+
+**Scalability and Maintainability**: Lazy loading promotes a modular approach to development, allowing you to split your codebase into smaller, more manageable chunks. This makes it easier to maintain and scale your application over time, as you can add new features or components without significantly impacting the initial load time.
+
+<br></br>
+
+## When should I use Lazy loading?
+
+Lazy loading is particularly useful for large applications with many components or heavy assets. It should be used to optimize the initial load time of your application, especially if there are components or assets that are not immediately required for rendering the initial view.
+
+<br></br>
+<br></br>
+
+- [geekster - Lazy Loading in React](https://www.geekster.in/articles/lazy-loading-in-react/)
