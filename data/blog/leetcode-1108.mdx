@@ -1,0 +1,69 @@
+---
+title: leetCode 1108. Defanging an IP Address
+date: '2024-12-28'
+tags: ['leetcode', 'javascript', 'easy']
+draft: false
+summary: leetcode 1108
+---
+
+leetCode [1108. Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/description/).
+
+## Problem
+
+Given a valid (IPv4) IP address, return a defanged version of that IP address.
+
+A defanged IP address replaces every period "." with "[.]".
+
+Example 1:
+
+```javascript
+Input: address = '1.1.1.1'
+Output: '1[.]1[.]1[.]1'
+```
+
+Example 2:
+
+```javascript
+Input: address = '255.100.50.0'
+Output: '255[.]100[.]50[.]0'
+```
+
+Constraints:
+
+```
+- The given address is a valid IPv4 address.
+```
+
+<br></br>
+
+## Approach
+
+I thought it would be easy if you could find the "." position. Locate the "." and then add "[" in front and "]" behind it.
+
+<br></br>
+
+## Solution
+
+```javascript
+var defangIPaddr = function (address) {
+  const arr = [...address]
+
+  // temp arr
+  const result = []
+
+  arr.map((item, index) => {
+    if (item === '.') {
+      result.push('[')
+      result.push(item)
+      result.push(']')
+    } else {
+      result.push(item)
+    }
+  })
+
+  return result.join('')
+}
+```
+
+<br></br>
+<br></br>
