@@ -1,0 +1,85 @@
+---
+title: leetCode 82.Remove Duplicates from Sorted List II
+date: '2024-12-29'
+tags: ['leetcode', 'javascript', 'medium']
+draft: false
+summary: leetcode linked list
+---
+
+leetCode [82.Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/?envType=study-plan-v2&envId=top-interview-150).
+
+## Problem
+
+Given the `head` of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
+
+Example 1:
+
+<img
+  src="https://assets.leetcode.com/uploads/2021/01/04/linkedlist1.jpg"
+  alt="example1"
+  width="500"
+/>
+
+```javascript
+Input: head = [1, 2, 3, 3, 4, 4, 5]
+Output: [1, 2, 5]
+```
+
+Example 2:
+
+<img
+  src="https://assets.leetcode.com/uploads/2021/01/04/linkedlist2.jpg"
+  alt="example12"
+  width="500"
+/>
+```javascript Input: head = [1,1,1,2,3] Output: [2,3] ```
+
+Constraints:
+
+```
+The number of nodes in the list is in the range [0, 300].
+-100 <= Node.val <= 100
+The list is guaranteed to be sorted in ascending order.
+```
+
+<br></br>
+
+## Solution
+
+```javascript
+var deleteDuplicates = function (head) {
+  // new node
+  var newHead = new ListNode(0)
+
+  //  define node
+  var now = newHead
+
+  // make temporary node
+  var tmp = head
+
+  var val = 0
+
+  // 현재 노드를 다 도는 동안 반복
+  while (tmp) {
+    // 현재 노드
+    val = tmp.val
+
+    // 다음 노드랑 현재 노드가 같은지 체크
+    if (tmp.next && tmp.next.val === val) {
+      tmp = tmp.next
+      while (tmp && tmp.val === val) tmp = tmp.next
+    } else {
+      // 노드를 다시 정의해줌
+      now.next = tmp
+      now = tmp
+      tmp = tmp.next
+      now.next = null
+    }
+  }
+
+  return newHead.next
+}
+```
+
+<br></br>
+<br></br>
