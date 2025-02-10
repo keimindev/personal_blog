@@ -1,0 +1,61 @@
+---
+title: What is the Singleton pattern?
+date: '2025-02-09'
+tags: ['javascript', 'designPattern']
+draft: false
+summary: Singleton pattern.
+---
+
+## What is the Singleton pattern?
+
+Singleton design pattern exposes a single instance that can be used by multiple components.
+
+Singleton is a design pattern that tell us that we can create only one instance of a class and that instance can be accessed globally.
+This is one of the basic types of design pattern. It makes sure that the class acts as a single source of entry for all the consumer components that want to access this state.
+
+・ Ensures that it creates only one instance of the class
+・ Provides a global access point to the state.
+・ Makes sure that the instance is only created the first time.
+
+<br></br>
+
+## example
+
+```javascript
+class Singleton {
+  constructor() {
+    if (Singleton.instance) {
+      return console.log('warning, singleton class already instantiated')
+    }
+    Signleton.instance = this
+    this.version = Date.now()
+    this.config = 'test'
+  }
+  static getInstance() {
+    if (!this.instance) {
+      this.instance = new Singleton()
+    }
+    return this.instance
+  }
+}
+
+// const s1 = new Singleton()
+// console.log(s1)
+// const s2 = new Signleton()
+// console.log(s2)
+
+// const s3 = Singleton.getInstance();
+// const s4 = Singleton.getInstance();
+// console.log(s3 === s4)   true
+```
+
+<br></br>
+
+The singleton design pattern can be useful in creating a global state that can be accessed by any component.
+Only a single instance exists, and the object is accessed through static functions.
+Since management is done within a single instance, code duplication can be prevented.
+Static functions allow global access.
+
+<br></br>
+
+- [React - useMemo](https://react.dev/reference/react/useMemo)
