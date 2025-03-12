@@ -18,10 +18,10 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="flex w-full flex-col items-center justify-between md:flex-row">
-        <section className="aspect-ratio">
+        <section className="aspect-ratio mt-10 md:mt-0">
           <RiveComponent onMouseEnter={() => rive && rive.play()} />
         </section>
-        <section className="mt-20 w-full text-center md:mt-0 md:text-start">
+        <section className="mt-10 w-full text-center md:mt-0 md:text-start">
           <div className="text-4xl">
             <p>Hello,</p>
             <p>
@@ -31,20 +31,6 @@ export default function Home({ posts }) {
           <div className="py-5">
             A frontend developer who prioritizes creating better user value over simply making a
             product.
-          </div>
-          <div className="mt-10 flex w-full items-center justify-between px-5">
-            {headerNavLinks
-              .filter((link) => link.href !== '/')
-              .map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="hidden text-xl font-bold text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400
-              sm:block"
-                >
-                  {link.title}
-                </Link>
-              ))}
           </div>
         </section>
       </div>

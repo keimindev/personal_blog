@@ -1,8 +1,8 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: "Ming's Dev",
-  author: 'Keira M J',
-  headerTitle: 'Ming',
+  author: 'Keira J',
+  headerTitle: 'Keira',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light

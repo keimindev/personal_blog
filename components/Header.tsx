@@ -18,9 +18,7 @@ const Header = () => {
               <Rive src="jains_avatar.riv" />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
-                {siteMetadata.headerTitle}
-              </div>
+              <div className="h-6 text-2xl font-semibold sm:block">{siteMetadata.headerTitle}</div>
             ) : (
               siteMetadata.headerTitle
             )}
@@ -28,7 +26,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
-        {/* {headerNavLinks
+        {headerNavLinks
           .filter((link) => link.href !== '/')
           .map((link) => (
             <Link
@@ -39,7 +37,7 @@ const Header = () => {
             >
               {link.title}
             </Link>
-          ))} */}
+          ))}
         <SearchButton />
         {/* <ThemeSwitch /> */}
         <MobileNav />
