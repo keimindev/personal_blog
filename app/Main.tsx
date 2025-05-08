@@ -1,8 +1,7 @@
 'use client'
 
-import Link from '@/components/Link'
-import headerNavLinks from '@/data/headerNavLinks'
 import { Fit, Layout, useRive } from '@rive-app/react-canvas'
+import TypingText from './typing-text'
 
 export default function Home({ posts }) {
   const { rive, RiveComponent } = useRive({
@@ -25,7 +24,10 @@ export default function Home({ posts }) {
           <div className="text-4xl">
             <p>Hello,</p>
             <p>
-              I'm <span className="text-5xl font-bold">Frontend Developer</span>
+              I'm
+              <span className="ml-2 text-5xl font-bold">
+                <TypingText texts={['a Frontend Developer', 'a Creator', 'a Bug Whisperer']} />
+              </span>
             </p>
           </div>
           <div className="py-5">
