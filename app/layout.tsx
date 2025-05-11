@@ -2,7 +2,7 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Space_Grotesk } from 'next/font/google'
+import { JetBrains_Mono, Nunito, Playpen_Sans } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -13,10 +13,19 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import './global.css'
 
-const space_grotesk = Space_Grotesk({
+const FONT_PLAYPEN_SANS = Playpen_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-space-grotesk',
+  weight: ['800'],
+  variable: '--font-playpen-sans',
+})
+
+const FONT_NUNITO = Nunito({
+  subsets: ['latin'],
+  display: 'swap',
+  style: ['normal', 'italic'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-nunito',
 })
 
 export const metadata: Metadata = {
@@ -60,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      className={`${FONT_NUNITO.variable} ${FONT_PLAYPEN_SANS.variable}scroll-smooth`}
       suppressHydrationWarning
     >
       <link
@@ -94,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>
-            <div className="flex min-h-screen flex-col justify-between font-sans">
+            <div className="flex min-h-screen flex-col justify-between">
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <Header />
                 <main className="mb-auto">{children}</main>
