@@ -15,6 +15,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      boxShadow: {
+        'neon-pink': '0 0 10px rgba(255, 0, 150, 0.6), 0 0 20px rgba(255, 0, 150, 0.4)',
+      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',
