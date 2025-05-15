@@ -32,8 +32,11 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className="hidden font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400
-              sm:block"
+              className="relative inline-block font-medium text-gray-900 before:absolute
+    before:bottom-0.5 before:left-0 before:-z-10 before:h-[13px]
+    before:w-full before:origin-left before:scale-x-0
+    before:rounded-sm before:bg-primary-500 before:opacity-70 before:transition-transform
+    before:duration-300 hover:before:scale-x-100"
             >
               {link.title}
             </Link>

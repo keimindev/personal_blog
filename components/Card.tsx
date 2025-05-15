@@ -30,7 +30,15 @@ const Card = ({ title, description, imgSrc, href }) => (
     <div className="p-6">
       <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
         {href ? (
-          <Link href={href} aria-label={`Link to ${title}`}>
+          <Link
+            href={href}
+            aria-label={`Link to ${title}`}
+            className="relative inline-block font-medium text-gray-900 before:absolute
+    before:bottom-0.5 before:left-0 before:-z-10 before:h-[16px]
+    before:w-full before:origin-left before:scale-x-0
+    before:rounded-sm before:bg-primary-400 before:opacity-70 before:transition-transform
+    before:duration-300 hover:before:scale-x-100"
+          >
             {title}
           </Link>
         ) : (
