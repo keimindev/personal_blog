@@ -5,6 +5,8 @@ interface Project {
   imgSrc?: string
   github?: string
   stack?: string[]
+  live?: string
+  app?: string
 }
 
 const projectsData: Project[] = [
@@ -21,6 +23,7 @@ const projectsData: Project[] = [
     href: '/blog/projects/tot-app',
     github: '',
     stack: ['reactnative', 'tailwindcss', 'recoil', 'appwrite'],
+    app: 'https://apps.apple.com/us/app/t-o-t/id6449160981',
   },
   {
     title: 'SafeMoney',
@@ -37,6 +40,7 @@ const projectsData: Project[] = [
     href: '/blog/projects/tot',
     github: 'https://github.com/keimindev/tot',
     stack: ['nextjs', 'recoil', 'mongodb', 'tailwindcss'],
+    live: 'https://tot.keimindev.com',
   },
   {
     title: 'Netflix OX Quiz',
@@ -45,6 +49,7 @@ const projectsData: Project[] = [
     href: '/blog/projects/netflix-ox-quiz',
     github: 'https://github.com/keimindev/OX_Quiz',
     stack: ['react', 'redux', 'firebase'],
+    live: 'https://netflix-ox-quiz.web.app/',
   },
 ]
 

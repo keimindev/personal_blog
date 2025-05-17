@@ -3,7 +3,7 @@ import Link from './Link'
 import SocialIcon from './social-icons'
 import TechStackIcon from './stack-icons'
 
-const Card = ({ title, description, imgSrc, href, github, stack }) => (
+const Card = ({ title, description, imgSrc, href, github, stack, live, app }) => (
   <div
     className={`${
       imgSrc && 'h-full'
@@ -49,11 +49,24 @@ const Card = ({ title, description, imgSrc, href, github, stack }) => (
       </h2>
       <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
       <div className="flex justify-between">
-        <div className="flex flex-wrap items-center justify-between">
+        <div className="flex flex-wrap items-center">
+          {app && (
+            <>
+              <Link href={app} className="text-gray-900 hover:text-primary-500 dark:text-gray-400">
+                AppStore
+              </Link>
+            </>
+          )}
           {github && (
             <>
               <SocialIcon kind="github" href={github} size={5} />
+              <span className="mx-2 text-gray-900 dark:text-gray-400">|</span>
             </>
+          )}
+          {live && (
+            <Link href={live} className="text-gray-900 hover:text-primary-500 dark:text-gray-400">
+              Live
+            </Link>
           )}
         </div>
         {stack?.length > 0 && (

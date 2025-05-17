@@ -24,6 +24,8 @@ export default function Projects() {
                 href={d.href}
                 github={d.github}
                 stack={d.stack}
+                live={d.live}
+                app={d.app}
               />
             ))}
           </div>
