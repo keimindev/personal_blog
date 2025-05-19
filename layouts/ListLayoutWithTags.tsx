@@ -131,7 +131,7 @@ export default function ListLayoutWithTags({
                 return (
                   <li
                     key={path}
-                    className="m-2 flex flex-row justify-between rounded-[20px] border border-gray-200 p-5"
+                    className="m-2 flex transform cursor-pointer flex-row justify-between rounded-[20px] border border-gray-200 p-5 transition-transform duration-300 hover:my-1 hover:scale-105"
                   >
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <dl>

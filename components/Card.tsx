@@ -7,7 +7,7 @@ const Card = ({ title, description, imgSrc, href, github, stack, live, app }) =>
   <div
     className={`${
       imgSrc && 'h-full'
-    }  hover: group relative w-full overflow-hidden rounded-[30px] border shadow-md dark:border-gray-700`}
+    } group relative w-full overflow-hidden rounded-[30px] border shadow-md transition-transform duration-300 hover:scale-105`}
   >
     {imgSrc &&
       (href ? (
