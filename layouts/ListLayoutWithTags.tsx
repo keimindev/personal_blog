@@ -157,7 +157,7 @@ export default function ListLayoutWithTags({
                       </div>
                     </article>
                     {images && (
-                      <div className="w-[20%]">
+                      <div className="hidden w-[20%] sm:block">
                         <img
                           src={images}
                           alt={title}
