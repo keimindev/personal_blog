@@ -143,7 +143,14 @@ export default function ListLayoutWithTags({
                       <div className="space-y-3">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                            <Link
+                              href={`/${path}`}
+                              className="relative inline-block font-medium text-gray-900 before:absolute
+    before:bottom-0.5 before:left-0 before:-z-10 before:h-[16px]
+    before:w-full before:origin-left before:scale-x-0
+    before:rounded-sm before:bg-primary-400 before:opacity-70 before:transition-transform
+    before:duration-300 hover:before:scale-x-100"
+                            >
                               {title}
                             </Link>
                           </h2>
